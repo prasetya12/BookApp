@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 import app.prasetya.com.booknow.MainActivity;
 import app.prasetya.com.booknow.Model.RoomModel;

@@ -9,13 +9,13 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:titleTextColor="@android:color/white"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            ></android.support.v7.widget.Toolbar>
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
     </android.support.design.widget.AppBarLayout>
 
     <RelativeLayout
@@ -30,16 +30,15 @@
             android:background="@color/colorPrimary"
             app:tabTextColor="@color/normalColorTabLayout"
             app:tabSelectedTextColor="@color/selctedColorTabLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/tab_layout"
-            ></android.support.v4.view.ViewPager>
+            android:layout_below="@id/tab_layout" />
 
 
     </RelativeLayout>

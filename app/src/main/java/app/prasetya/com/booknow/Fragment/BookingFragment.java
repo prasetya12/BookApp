@@ -16,10 +16,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import java.text.DateFormat;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
 
 import app.prasetya.com.booknow.InformationBooking;
 import app.prasetya.com.booknow.MainActivity;
@@ -141,7 +142,7 @@ public class BookingFragment extends Fragment {
     }
 
     private void updateLabel() {
-    String myFormat = "MM/dd/yy";
+    String myFormat = "EEE, d MMM yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.ENGLISH);
 
         mDatePicker.setText(sdf.format(myCalendar.getTime()));
@@ -149,13 +150,16 @@ public class BookingFragment extends Fragment {
     }
 
     private void setTimePicker(){
-        timePickerDialog = new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
+        Calendar mCurrentTime = Calendar.getInstance();
+        int hour = mCurrentTime.get(Calendar.HOUR_OF_DAY);
+        int minute = mCurrentTime.get(Calendar.MINUTE);
+        timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
                 timePicker.setIs24HourView(true);
                 mTimePicker.setText(String.format("%02d : %02d",hourOfDay,minutes));
             }
-        },0,0,false);
+        },0,0,true);
         timePickerDialog.show();
 
 

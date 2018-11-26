@@ -2,4 +2,28 @@
     <string name="app_name">BookNow</string>
     <string name="facility">- Air Condictioner
         - Tv Monitor 32 inch</string>
+    <string name="booknow">BookNow</string>
+    <string name="get_started">Get Started</string>
+    <string name="help_you_book_meeting_room_easy">help you book meeting room easy</string>
+    <string name="booking_detail">Booking Detail</string>
+    <string name="artwork_meeting_room">Artwork Meeting Room</string>
+    <string name="rp_500_000_days">Rp. 500.000 /Days</string>
+    <string name="book_now">BOOK NOW</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="personal_detail">Personal Detail</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="todo">TODO</string>
+    <string name="artwork_meeting_room">Artwork Meeting Room</string>
+    <string name="rp_500_000_days">Rp. 500.000 /Days</string>
+    <string name="meeting_room">Meeting Room</string>
+    <string name="generate">Generate</string>
+    <string name="exit">Exit</string>
+    <string name="artwork_meeting_room">Artwork Meeting Room</string>
+    <string name="facility_">Facility :</string>
+    <string name="tv_monitor_32_inch">- TV Monitor 32 inch</string>
+    <string name="rp_500_000_days">Rp. 500.000 /Days</string>
 </resources>

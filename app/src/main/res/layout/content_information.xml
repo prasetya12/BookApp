@@ -22,7 +22,7 @@
                 android:id="@+id/text_information"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Meeting Room"
+                android:text="@string/meeting_room"
                 android:textColor="@android:color/white"
                 android:gravity="center_horizontal"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
@@ -39,7 +39,7 @@
             android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Generate"
+            android:text="@string/generate"
             android:background="@color/colorAccent"
             android:textColor="@android:color/white"
             />
@@ -49,7 +49,8 @@
             android:visibility="gone"
             android:layout_gravity="center_horizontal"
             android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:layout_height="300dp"
+            android:contentDescription="@string/todo" />
 
         <Button
             android:id="@+id/btnExit"
@@ -58,7 +59,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Exit"
+            android:text="@string/exit"
             android:background="@android:color/holo_red_light"
             android:textColor="@android:color/white"
             />

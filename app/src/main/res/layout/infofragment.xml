@@ -11,7 +11,7 @@
         android:layout_height="250dp"
         android:src="@drawable/pic_artwork"
         android:scaleType="centerCrop"
-        />
+        android:contentDescription="@string/todo" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
             android:id="@+id/tittleDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Artwork Meeting Room"
+            android:text="@string/artwork_meeting_room"
             android:textColor="@color/colorTextPrimary"
             style="@style/TextAppearance.AppCompat.Title"
             />
@@ -41,7 +41,7 @@
             android:id="@+id/txt_facility"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Facility :"
+            android:text="@string/facility_"
             android:textColor="@color/colorTextSecondary"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_marginTop="8dp"
@@ -51,7 +51,7 @@
             android:id="@+id/facilityDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- TV Monitor 32 inch"
+            android:text="@string/tv_monitor_32_inch"
             android:textColor="@color/colorTextSecondary"
             style="@style/TextAppearance.AppCompat.Subhead"
             />
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Rp. 500.000 /Days"
+            android:text="@string/rp_500_000_days"
             style="@style/Base.TextAppearance.AppCompat.Large"
             />
 

@@ -1,8 +1,8 @@
 package app.prasetya.com.booknow;
 
-import android.content.Context;
+
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
+
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +40,13 @@ public class DetailActivity extends AppCompatActivity {
         mToolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setTitle("Book Now");
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setupViewPager(ViewPager viewPager){

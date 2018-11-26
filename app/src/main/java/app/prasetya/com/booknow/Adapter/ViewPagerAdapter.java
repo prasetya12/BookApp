@@ -3,12 +3,12 @@ package app.prasetya.com.booknow.Adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-import app.prasetya.com.booknow.Fragment.InfoFragment;
+
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     private final List<Fragment> fragmentList = new ArrayList<>();

@@ -1,13 +1,15 @@
 package app.prasetya.com.booknow;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toolbar;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
     public static int currentItem;
     public static View.OnClickListener mainOnclickListener;
+
+    @Override
+    public void onBackPressed() {
+        showAlert();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.Adapter adapter = new RecyclerViewAdapter(mainData);
         recyclerView.setAdapter(adapter);
 
+
+
     }
 
     private void initToolbar() {
@@ -73,5 +82,31 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),DetailActivity.class));
 
         }
+    }
+
+    private void showAlert(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        alertDialogBuilder.setTitle("EXIT");
+
+        alertDialogBuilder.setMessage("Do You Want Exit ?")
+                            .setIcon(R.drawable.ic_warning_black_24dp)
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    moveTaskToBack(true);
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    System.exit(1);
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.cancel();
+                                }
+                            });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }
